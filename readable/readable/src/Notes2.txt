@@ -1,0 +1,55 @@
+handleSubmit = (event) => {
+	event.preventDefault();
+  let postBody = JSON.stringify({
+	author: this.state.name,
+	body: this.state.post,
+	category: this.state.category,
+	commentCount: 0,
+	deleted: false,
+	id: Math.floor(Math.random() * 1000000000),
+	timestamp: Date.now(), 	  	  	
+	title: this.state.title, 	
+	voteScore: 1,
+	});
+	console.log('post body:' + postBody);
+	
+  API.addNewPost(postBody);
+  this.setState({ fireRedirect: true })
+
+}
+
+
+
+<Route path='/:category' component={CategoryView} />
+<Route path='/:category/:id' component={SinglePost} />
+
+
+<Route exact path="/:category/:id" render={(props) => (
+            <CreateEditPost
+              category={props.match.params.category}
+              id={props.match.params.id}
+            />
+          )}/>
+		  
+		  
+		  
+		  
+POPUP TOGGLE STUFF< WAS IN POSTDISPLAY:
+togglePopup = () => {
+    this.setState({
+      showPost: !this.state.showPost,
+	  });
+}
+
+determinePost = (event) => {
+	this.setState({ postID: event.currentTarget.id})
+	this.togglePopup(); 	
+}
+UNDERNEATH UL IN RENDER
+{this.state.showPost ? 
+          <PopupPost
+            closePost={this.togglePopup.bind(this)}
+			post={this.props.posts.filter(post => post.id == this.state.postID)}
+			/>
+          : null
+        }

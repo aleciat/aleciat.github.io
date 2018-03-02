@@ -1,0 +1,562 @@
+.app {
+	background-color: white;
+	margin-bottom: 100px;
+}
+
+/* unvisited link */
+a:link {
+    color: #74AFAD;
+	text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #74AFAD;
+	text-decoration: none;	
+}
+
+/* mouse over link */
+a:hover {
+    color: #D9853B;
+	text-decoration: none;	
+}
+
+
+
+.appContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.App-header {
+  background-color: #ededed;
+  height: 120px;
+  width: 100%;
+  border-top: 2px solid #d3d3d3;
+  border-bottom: 2px solid #d3d3d3; 
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+.App-title {
+  font-size: 4em;
+  margin-top: 22px;
+  font-family: 'Dosis', sans-serif;
+  color: #1d1e1e;
+}
+
+.optionsContainer {
+	display: flex;
+	flex-direction: row;
+	width: 65%;
+	justify-content: space-around;
+	padding: 30px;
+}
+
+.columnOptions {
+	font-size: 1.2em;
+	padding: 15px;
+	cursor: pointer;
+	border: 2px #558C89 solid;
+	background-color: #74AFAD;
+font-family: 'Dosis', sans-serif;
+}
+
+.newPost {
+	color: white;
+}
+
+
+.columnOptions:hover {
+	background-color: #D9853B;
+	
+}
+
+.sortOptions {
+	width: 20%;
+	margin-left: 60%;
+}
+
+
+
+.postsWrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.mainPosts {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	background-color: #ededed;
+	border: 1px #d8d8d8 solid;
+	padding: 15px;
+	width: 600px;
+	
+}
+
+.deletePosts {
+	width: 23px;
+	padding: 3px;
+	margin-left: 585px;
+	margin-top: -54px;
+}
+
+.editPost {
+	width: 23px;
+	padding: 3px;
+	margin-left: 562px;
+	margin-top: -25px;
+}
+
+
+.postTitle {
+	font-size: 2.4em;
+	font-family: 'Roboto', sans-serif;
+}
+
+.singlePostTitle {
+	font-size: 2.4em;
+	font-family: 'Roboto', sans-serif;
+	color: #1d1e1e;
+}
+
+.postAuthor {
+	color: grey;
+	justify-content: flex-start;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	margin-top: 40px;
+}
+
+.bigElement {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.categoryAndComments {
+	display: flex;
+	flex-direction: row;
+	margin-top: 8px;
+}
+
+.postCategory {
+	display: flex;
+    font-family: 'Dosis', sans-serif;
+	padding: 4px;
+	font-size: 1.2em;
+	cursor: pointer;
+	border: 2px #558C89 solid;
+	background-color: #74AFAD;
+	width: auto;
+	color: black;
+	height: 26px;
+	text-align: center;
+}
+
+.postCategory:hover {
+	background-color: #558C89;
+}
+
+.postCat {
+	font-family: 'Dosis', sans-serif;
+	font-size: 1.2em;
+	padding: 5px;
+	margin-right: 5px;
+	color: #558C89;
+}
+
+.singlePostComments {
+	display: flex;
+    font-family: 'Dosis', sans-serif;
+	padding: 5px;
+	font-size: 1.2em;
+	cursor: pointer;
+	border: 2px #558C89 solid;
+	background-color: #74AFAD;
+	width: 16%;
+	height: 26px;
+	text-align: center;
+}
+
+.postComments {
+	display: flex;
+    font-family: 'Dosis', sans-serif;
+	padding: 4px;
+	font-size: 1.2em;
+	cursor: pointer;
+	border: 2px #558C89 solid;
+	background-color: #74AFAD;
+	width: auto;
+	height: 26px;
+	text-align: center;
+	margin-left: 2%;
+}
+
+.postComments:hover {
+	background-color: #558C89;
+	
+}
+
+
+ul {
+list-style-type:none;
+}
+
+
+
+.triangleContainer {
+	margin-top: 30px;
+	margin-right: 10px;
+font-family: 'Roboto', sans-serif;
+	font-size: 1.9em;
+}
+
+.triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #74AFAD;
+	
+}
+
+.triangle-up p {
+    text-align: center;
+    top: 27px;
+    left: -5px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin: 0px;
+}
+
+.triangle-up:hover {
+	border-bottom: 50px solid #558C89;
+	cursor: pointer;
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid #558C89;
+}
+
+.triangle-down:hover {
+	border-top: 50px solid #74AFAD;
+	cursor: pointer;
+}
+
+
+
+//COMMENT COMPONENT
+.commentWrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.mainCommentBody {
+	background-color: #ededed;
+	border: 1px #d8d8d8 solid;
+	padding: 15px;
+	width: 600px;
+	color: #558C89;
+	font-size: .85em;
+}
+
+.commentTitle {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	color: #558C89;
+	font-size: 3em;
+    font-family: 'Dosis', sans-serif;
+	text-align: center;
+	width: 100%;
+}
+
+.addNewComment {
+	margin-left: 20px;
+	margin-top: 10px;
+	display: flex;
+	color: white;
+	background-color: #74AFAD;
+	height: 40px;
+	border: none;
+	cursor: pointer;
+	border-radius: 30%;
+}
+
+.addNewComment:hover {
+	background-color: #D9853B;
+}
+
+.commentTriangleContainer {
+	margin-top: 15px;
+	padding: 10px;
+font-family: 'Roboto', sans-serif;
+	font-size: 1.9em;
+}
+
+.commentTriangle-up {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 40px solid #74AFAD;
+	
+}
+
+.commentTriangle-up p {
+    text-align: center;
+    top: 21px;
+    left: -12px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin: 0px;
+}
+
+.commentTriangle-up:hover {
+	border-bottom: 40px solid #558C89;
+	cursor: pointer;
+}
+
+.commentTriangle-down {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 40px solid #558C89;
+}
+
+.commentTriangle-down:hover {
+	border-top: 40px solid #74AFAD;
+	cursor: pointer;
+}
+
+.deleteComment {
+	float: right;
+	margin-top: -40px;
+	padding: 3px;
+	margin-right: -15px;
+}
+
+.editComment {
+	float: right;
+	margin-right: 7px;
+	margin-top: -40px;
+	padding: 3px;
+}
+
+.individualComment {
+	padding: 10px;
+font-family: 'Roboto', sans-serif;
+}
+
+.commentAuthor {
+	color: grey;
+	font-size: .9em;
+	padding-bottom: 8px;
+}
+
+.commentBody {
+	font-size: 1.5em;
+}
+
+
+.upvote {
+	color: #d3d3d3;
+}
+
+.upvote:hover {
+	color: black;
+	background-color: #558C89;
+}
+
+
+//SINGLE POST PAGE
+.singlePostsWrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 15px;
+	}
+
+.individualBody {
+font-family: 'Roboto', sans-serif;
+	font-size: 1.3em;
+	margin-left: 25px;
+	padding: 10px;
+	margin-top: 40px;
+	color: #558C89;
+}
+
+.postButtons {
+	color: grey;
+	justify-content: center;
+    font-family: 'Dosis', sans-serif;
+	padding: 15px;
+	font-size: 1.2em;
+	cursor: pointer;
+	border: 2px #558C89 solid;
+	background-color: #74AFAD;
+	color: black;
+	text-align: center;
+}
+
+.postButtons:hover {
+	background-color: #558C89;
+	
+}
+
+//NEW COMMENT PAGE
+
+.newComments {
+	font-size: 1.2em;
+	padding: 5px;
+	cursor: pointer;
+	border: 2px #558C89 solid;
+	background-color: #74AFAD;
+    font-family: 'Dosis', sans-serif;
+	margin-top: 15px;
+}
+
+.newCommentWrapper {
+	padding: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 25px;
+
+}
+
+label {
+    font-family: 'Dosis', sans-serif;
+}
+
+.commentForm {
+	width: 60%;
+	justify-content: center;
+	display: flex;
+}
+
+
+//POPUP PAGE
+.popUp {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: black;
+}
+
+.popup_inner {
+  position: fixed;
+  left: 10%;
+  right: 10%;
+  top: 3%;
+  bottom: 3%;
+  margin: auto;
+  background: white;
+  border: 2px silver solid;
+  padding: 20px;
+}
+
+
+//CREATE COMPONENT
+.container {
+    border-radius: 5px;
+    background-color: #ededed;
+    padding: 20px;
+	width: 60%;
+	margin: auto;
+}
+
+.createTitle {
+	font-size: 3em;
+	text-align: center;
+	padding: 15px;
+	color: #558C89;
+	font-family: 'Dosis', sans-serif;
+}
+
+input[type=text], select, textarea {
+	width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.submitButton {
+    font-family: 'Dosis', sans-serif;
+	background-color: #74AFAD;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	font-size: 1.4em;
+}
+
+.submitButton:hover {
+    background-color: #558C89;
+}
+
+.closeButton {
+	margin-left: 10px;
+}
+
+.editTitle {
+	color: #74AFAD;
+    font-family: 'Dosis', sans-serif;
+	font-size: 4em;
+}
+
+.sortOptions {
+	font-family: 'Dosis', sans-serif;
+}
+
+.container404 {
+	text-align: center;
+}
+
+.title404 {
+	font-size: 4em;
+	text-align: center;
+	color: #D9853B;
+	font-family: 'Dosis', sans-serif;
+	margin-top: 40px;
+}
+
+.home404 {
+	padding: 20px;
+	color: white;
+	background-color: #74AFAD;
+	font-family: 'Dosis', sans-serif;
+	border: #558C89 2px solid;
+	margin-top: 10px;
+	font-size: 1.5em;
+	text-align: center;
+	cursor: pointer;
+}
+
+.home404:hover {
+	background-color: #D9853B;
+}
