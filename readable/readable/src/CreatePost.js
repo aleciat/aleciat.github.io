@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import { addPost, fetchPosts } from './Actions/index'
 
-class Create extends Component {
+class CreatePost extends Component {
   state = {
 	title: "",
 	body: "",
@@ -113,4 +113,4 @@ const mapDispatchToProps = (dispatch) => {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Create);
+export default connect(mapStateToProps, mapDispatchToProps)(CreatePost);

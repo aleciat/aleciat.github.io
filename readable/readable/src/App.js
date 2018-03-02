@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom'
-import Create from './Create'
+import { Route } from 'react-router-dom'
+import CreatePost from './CreatePost'
 import PostDisplay from './PostDisplay'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import { fetchPosts } from './Actions/index'
 import { withRouter } from 'react-router-dom'
-import Thanks from './thanks'
 import Categories from './Categories'
 import Upper from './Upper'
 import SinglePost from './SinglePost'
@@ -25,10 +24,8 @@ componentWillMount() {
 render() {
     return (
 	<div className="app">	
-    <Route exact path="/create" render={() => ( <Create /> )}/>
+    <Route exact path="/create" render={() => ( <CreatePost /> )}/>
 	 
-	<Route exact path="/thanks" render={() => ( <Thanks /> )}/>
-	
 	<Route exact path="/:category" render={(props) => (
 	<div>
 		<Upper />

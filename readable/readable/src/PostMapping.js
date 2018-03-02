@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import { returnVote, setPost, deletePost, handlePopUps } from './Actions/index'
 import { Link } from 'react-router-dom'
-import Popup from './Popup'
+import EditPostPopup from './EditPostPopup'
 
 
 
@@ -35,7 +35,7 @@ var timestamp3 = timestamp1.toLocaleTimeString();
 	</li>
 	
 		 {this.props.postPopUp ? 
-          <Popup
+          <EditPostPopup
             title={post.title}
 			body={post.body}
 			author={post.author}

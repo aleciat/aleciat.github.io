@@ -24,7 +24,16 @@ componentDidMount() {
 
 handleSubmit = (event) => {
 	event.preventDefault();
-	if (this.props.comment.id == undefined) {
+	if (this.props.comment && this.props.comment.id) {
+		const id = this.props.comment.id;
+		const bodySubmit = {
+		timestamp: Date.now(),
+		body: this.state.body
+		}
+	this.props.editCommentAction(id, bodySubmit);
+	}
+	
+	else	{
 	const id = (Math.floor(Math.random() * 1000000000));
 	const timestamp = Date.now();
 	const { body, author } = this.state;
@@ -41,14 +50,7 @@ handleSubmit = (event) => {
 		body: "",
 		author: "",
 	})}
-	if (this.props.comment.id !== undefined) {
-		const id = this.props.comment.id;
-		const bodySubmit = {
-		timestamp: Date.now(),
-		body: this.state.body
-		}
-	this.props.editCommentAction(id, bodySubmit);
-	}
+
 	
 	this.props.handleCommentPopUps(null, "commentPopUp");
 	this.props.retrieveComments(this.props.postID);

@@ -213,7 +213,7 @@ list-style-type:none;
 .triangleContainer {
 	margin-top: 30px;
 	margin-right: 10px;
-font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.9em;
 }
 
@@ -228,8 +228,8 @@ font-family: 'Roboto', sans-serif;
 
 .triangle-up p {
     text-align: center;
-    top: 27px;
-    left: -5px;
+    top: 30px;
+    left: -7px;
     position: relative;
     width: 15px;
     height: 15px;
@@ -318,7 +318,7 @@ font-family: 'Roboto', sans-serif;
 .commentTriangle-up p {
     text-align: center;
     top: 21px;
-    left: -12px;
+    left: -11px;
     position: relative;
     width: 15px;
     height: 15px;

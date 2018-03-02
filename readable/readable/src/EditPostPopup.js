@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 
 
 
-class Popup extends Component {
+class EditPostPopup extends Component {
 constructor() {
   super();
     this.state = {
@@ -114,5 +114,5 @@ const mapDispatchToProps = (dispatch) => {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Popup);
+export default connect(mapStateToProps, mapDispatchToProps)(EditPostPopup);
 
